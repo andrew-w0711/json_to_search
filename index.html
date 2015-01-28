@@ -1,0 +1,34 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+function showResult() {
+    
+    var str = document.getElementById("zipcode").value;
+
+    document.getElementById("txtResult").innerHTML = "";
+     
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("txtResult").innerHTML = xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET","result.php?zipcode="+str,true);
+    xmlhttp.send();
+    
+}
+</script>
+</head>
+<body>
+
+<input type="text" name="zipcode" id="zipcode" required placeholder = "Input zipcode">
+<button onclick="showResult()">Search</button>
+<hr>
+<div id="txtResult"><b>Result will be listed here...</b></div>
+</body>
+</html>

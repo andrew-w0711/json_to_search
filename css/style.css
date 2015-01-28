@@ -1,0 +1,29 @@
+img{
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	float:left;
+}
+
+.row{
+	float:left;
+	padding-bottom: 30px;
+}
+
+p{
+	float: left;
+	margin-top: 20px;
+	margin-right: 50px;
+}
+
+.content{
+	float: left;
+	margin-left: 20px;
+	border-bottom: 1px solid grey;
+	padding-bottom: 15px;
+}
+
+hr{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
